@@ -18,5 +18,16 @@ router.get("/", function(req, res) {
   });
 });
 
+router.post("/api/veggieburgers", function(req, res){
+  veggie_burger.create([
+      "veggieburger_name", "devoured"
+    ], [
+      req.body.veggieburger_name, req.body.devoured
+    ], function(result){
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    });
+});
+
 
 module.exports = router;

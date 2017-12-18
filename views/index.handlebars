@@ -17,14 +17,17 @@
   {{/each}}
 </ul>
 
-<ul>
-  {{#each veggieburgers}}
-  <li>{{id}}</li>
-  <li>{{veggieburger_name}}</li>
-  <li>{{date_consumed}}</li>
-  {{/each}}
-</ul>
 
+<h2>Add a Veggie Burger, The Program will automatically make this burger veggie</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="vb_id">Veggie Burger Name:</label>
+    <input type="text" id="vb_id" name="name">
+  </div>
+
+  <button type="submit">Add Veggie Burger</button>
+</form>
 
 <h1>Veggie Burgers!!!!!</h1>
 <h2>Did you know:</h2>
