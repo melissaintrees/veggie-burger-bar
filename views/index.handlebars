@@ -1,0 +1,41 @@
+
+<h2>Veggie Burgers that have not been eaten!</h2>
+<ul>
+  {{#each veggieburgers}}
+    {{#unless devoured}}
+      {{> veggieburgers/veggie-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+<h2>Veggie Burgers that have been eaten </h2>
+
+<ul>
+  {{#each veggieburgers}}
+    {{#if devoured}}
+      {{> veggieburgers/veggie-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each veggieburgers}}
+  <li>{{id}}</li>
+  <li>{{veggieburger_name}}</li>
+  <li>{{date_consumed}}</li>
+  {{/each}}
+</ul>
+
+
+<h1>Veggie Burgers!!!!!</h1>
+<h2>Did you know:</h2>
+<ul>
+<li>There are more than 100 vegetable based burgers on the market that you'll swear taste like the real thing?</li>
+<li>If you don’t count French fries, ketchup or pizza as
+vegetables, more than half of Americans eat no
+vegetables at all?</li>
+<li>Cancer and heart disease can be prevented and even
+reversed with the right plant-based food choices?</li>
+<li>Cows raised for meat are impacting our climate more
+than cars?</li>
+<p>* Facts from the Real Food Action Guide by Tom and Ocean Robbins</p>
+</ul>

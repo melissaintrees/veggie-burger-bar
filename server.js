@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 
 var methodOverride = require('method-override');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3200;
 
 var app = express();
 
@@ -16,9 +16,10 @@ app.use(bodyParser.urlencoded({extended: false }));
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
 app.set("view engine", "handlebars");
 
-var routes = require("./controllers/veggieBurgerController.js");
+var routes = require("./controllers/veggieburgers_controller.js");
 
 app.use("/", routes);
 

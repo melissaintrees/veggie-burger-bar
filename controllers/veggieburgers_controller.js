@@ -1,7 +1,7 @@
 //import express
 var express = require("express");
 
-// import the veggie butger js
+// import the veggie burger js
 var veggie_burger = require("../models/veggie_burger.js");
 
 // create a router for your app
