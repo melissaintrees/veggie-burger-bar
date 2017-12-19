@@ -18,12 +18,18 @@
 </ul>
 
 
-<h2>Add a Veggie Burger, The Program will automatically make this burger veggie</h2>
+<h2>Add a Veggie Burger</h2>
 <form class="create-form">
 
   <div class="form-group">
     <label for="vb_id">Veggie Burger Name:</label>
     <input type="text" id="vb_id" name="name">
+  </div>
+
+    <div class="form-group">
+    <label for="devoured">Eaten?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Eaten!<br>
+    <input type="radio" name="devoured" value="0"> To be Eaten
   </div>
 
   <button type="submit">Add Veggie Burger</button>

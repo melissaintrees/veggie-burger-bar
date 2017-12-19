@@ -1,24 +1,24 @@
 $(function() {
-  // $(".change-sleep").on("click", function(event) {
-  //   var id = $(this).data("id");
-  //   var newSleep = $(this).data("newsleep");
+  $(".change-eaten").on("click", function(event) {
+    var id = $(this).data("id");
+    var newEaten = $(this).data("neweaten");
 
-  //   var newSleepState = {
-  //     sleepy: newSleep
-  //   };
+    var newEatenState = {
+      devoured: newEaten
+    };
 
-  //   // Send the PUT request.
-  //   $.ajax("/api/cats/" + id, {
-  //     type: "PUT",
-  //     data: newSleepState
-  //   }).then(
-  //     function() {
-  //       console.log("changed sleep to", newSleep);
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
+    // Send the PUT request.
+    $.ajax("/api/veggieburgers" + id, {
+      type: "PUT",
+      data: newEatenState
+    }).then(
+      function() {
+        console.log("changed foodform to", newEaten);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
 
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
@@ -26,7 +26,7 @@ $(function() {
 
     var newVB = {
       veggieburger_name: $("#vb_id").val().trim(),
-      // devoured: $("[name=sleepy]:checked").val().trim()
+      devoured: $("[name=devoured]:checked").val().trim()
     };
 
     // Send the POST request.
