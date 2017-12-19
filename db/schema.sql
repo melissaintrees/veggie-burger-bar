@@ -11,3 +11,4 @@ CREATE TABLE veggieburgers
   date_consumed TIMESTAMP,
   PRIMARY KEY (id)
 );
+

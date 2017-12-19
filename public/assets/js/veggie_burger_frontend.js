@@ -8,7 +8,7 @@ $(function() {
     };
 
     // Send the PUT request.
-    $.ajax("/api/veggieburgers" + id, {
+    $.ajax("/api/veggieburgers/" + id, {
       type: "PUT",
       data: newEatenState
     }).then(
@@ -42,18 +42,18 @@ $(function() {
     );
   });
 
-  // $(".delete-cat").on("click", function(event) {
-  //   var id = $(this).data("id");
+  $(".delete-veggieburger").on("click", function(event) {
+    var id = $(this).data("id");
 
-  //   // Send the DELETE request.
-  //   $.ajax("/api/cats/" + id, {
-  //     type: "DELETE",
-  //   }).then(
-  //     function() {
-  //       console.log("deleted cat", id);
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
+    // Send the DELETE request.
+    $.ajax("/api/veggieburgers/" + id, {
+      type: "DELETE",
+    }).then(
+      function() {
+        console.log("deleted vb", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
 });

@@ -1,9 +1,35 @@
 
+
+<div class="submitveggie">
+<br>
+<img src="assets/img/beet-burger.jpg" alt="beet burger" />
+  <h2>Eat A Veggie Burger</h2>
+
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="vb_id"></label>
+      <input type="text" id="vb_id" name="name">
+    </div>
+    <br>
+
+    <button type="submit">Submit</button>
+        <div class="form-group">
+    <label for="devoured"></label><br>
+    <input type="radio" name="devoured" value="0" checked> To Be Eaten!<br>
+    <input type="radio" name="devoured" value="1"> Eaten
+  </div>
+  </form>
+  <p>Enter the name of a Veggie Burger you would like to eat and click "Submit"</p>
+</div>
+
+
+
 <h2>Veggie Burgers that have not been eaten!</h2>
 <ul>
   {{#each veggieburgers}}
     {{#unless devoured}}
-      {{> veggieburgers/veggie-block devoured=true}}
+      {{> veggieburgers/veggie-block devoured=false}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -12,28 +38,11 @@
 <ul>
   {{#each veggieburgers}}
     {{#if devoured}}
-      {{> veggieburgers/veggie-block devoured=false}}
+      {{> veggieburgers/veggie-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
 
-
-<h2>Add a Veggie Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="vb_id">Veggie Burger Name:</label>
-    <input type="text" id="vb_id" name="name">
-  </div>
-
-    <div class="form-group">
-    <label for="devoured">Eaten?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Eaten!<br>
-    <input type="radio" name="devoured" value="0"> To be Eaten
-  </div>
-
-  <button type="submit">Add Veggie Burger</button>
-</form>
 
 <h1>Veggie Burgers!!!!!</h1>
 <h2>Did you know:</h2>
