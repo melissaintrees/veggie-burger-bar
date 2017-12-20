@@ -26,7 +26,7 @@ $(function() {
 
     var newVB = {
       veggieburger_name: $("#vb_id").val().trim(),
-      devoured: $("[name=devoured]:checked").val().trim()
+
     };
 
     // Send the POST request.
