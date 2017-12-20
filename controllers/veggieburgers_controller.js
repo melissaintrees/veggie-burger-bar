@@ -33,6 +33,7 @@ router.put("/api/veggieburgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
+  console.log(typeof(req.params.id));
 
   veggie_burger.update(req.body.devoured
   , condition, function(result) {

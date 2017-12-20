@@ -1,5 +1,6 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
+
 function printQuestionMarks(num) {
   var arr = [];
 
@@ -26,6 +27,7 @@ function objToSql(ob) {
       // e.g. {veggieburger_name: 'Veggie Burger'} => ["veggieburger_name='Veggie Burger'"]
       // e.g. {devoured: true} => ["devoured=true"]
       arr.push(key + "=" + value);
+
     }
   }
 
