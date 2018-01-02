@@ -3,7 +3,7 @@
 <div class="submitveggie">
 <br>
 <img src="assets/img/beet-burger.jpg" alt="beet burger" />
-  <h2>Eat A Veggie Burger</h2>
+  <h2>Place Your Veggie Burger Order</h2>
 
   <form class="create-form" action="/" method="POST">
     <div class="form-group">
@@ -14,14 +14,14 @@
     <button type="submit">Place Order</button>
   </form>
 
-  <p>If you would like a veggie burger, enter the name and click "Place Order"</p>
+  <p>Make your Own Veggie Burger Above or Order One From the Menu Below !</p>
 
 </div>
 
 
 <div class="vb_left">
 
-<h2>Veggie Burgers that have not been eaten!</h2>
+<h2>Veggie Burgers Ready:</h2>
 
   {{#each burgers}}
     {{#unless this.devoured}}
@@ -39,12 +39,12 @@
 
 <div class="vb_right">
 
-<h2>Veggie Burger Options To Order</h2>
+<h2>Veggie Burger Menu:</h2>
 
   {{#each burgers}}
     {{#if this.devoured}}
 
-      {{this.id}}
+
       {{this.veggieburger_name}}
         <form action="/{{this.id}}?_method=POST" method="POST">
           <input type="hidden" name="devoured" value="false">

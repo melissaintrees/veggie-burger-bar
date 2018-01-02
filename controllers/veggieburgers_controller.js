@@ -18,13 +18,13 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/", function(request, result) {
+router.post("/", function(req, res) {
     burger.create([
         "veggieburger_name"
     ], [
-        request.body.name
+        req.body.name
     ], function() {
-        result.redirect("/");
+        res.redirect("/");
     });
 });
 
