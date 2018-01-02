@@ -5,51 +5,56 @@
 <img src="assets/img/beet-burger.jpg" alt="beet burger" />
   <h2>Eat A Veggie Burger</h2>
 
-  <form class="create-form">
-
+  <form class="create-form" action="/" method="POST">
     <div class="form-group">
       <label for="vb_id"></label>
-      <input type="text" id="vb_id" name="name">
+      <input type="text" id="vb_id" name="name" placeholder="CUSTOM VEGGIE BURGER" required/>
     </div>
-    <br>
 
-    <button type="submit">Submit</button>
-
+    <button type="submit">Place Order</button>
   </form>
-  <p>Enter the name of a Veggie Burger you would like to eat and click "Submit"</p>
+
+  <p>If you would like a veggie burger, enter the name and click "Place Order"</p>
+
+</div>
+
+
+<div class="vb_left">
+
+<h2>Veggie Burgers that have not been eaten!</h2>
+
+  {{#each burgers}}
+    {{#unless this.devoured}}
+      {{this.veggieburger_name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit" class="devour"> Devour it!</button>
+        </form>
+
+    {{/unless}}
+  {{/each}}
+
+</div>
+
+<div class="vb_right">
+
+<h2>Veggie Burger Options To Order</h2>
+
+  {{#each burgers}}
+    {{#if this.devoured}}
+
+      {{this.id}}
+      {{this.veggieburger_name}}
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="false">
+          <button type="submit" class="order-again"> Order it!</button>
+        </form>
+
+    {{/if}}
+  {{/each}}
+
 </div>
 
 
 
-<h2>Veggie Burgers that have not been eaten!</h2>
-<ul>
-  {{#each veggieburgers}}
-    {{#unless devoured}}
-      {{> veggieburgers/veggie-block devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
-<h2>Veggie Burgers that have been eaten </h2>
-
-<ul>
-  {{#each veggieburgers}}
-    {{#if devoured}}
-      {{> veggieburgers/veggie-block devoured=true}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-
-<h1>Veggie Burgers!!!!!</h1>
-<h2>Did you know:</h2>
-<ul>
-<li>There are more than 100 vegetable based burgers on the market that you'll swear taste like the real thing?</li>
-<li>If you don’t count French fries, ketchup or pizza as
-vegetables, more than half of Americans eat no
-vegetables at all?</li>
-<li>Cancer and heart disease can be prevented and even
-reversed with the right plant-based food choices?</li>
-<li>Cows raised for meat are impacting our climate more
-than cars?</li>
-<p>* Facts from the Real Food Action Guide by Tom and Ocean Robbins</p>
-</ul>
