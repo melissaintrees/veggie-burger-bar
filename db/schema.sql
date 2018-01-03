@@ -1,14 +1,11 @@
-DROP DATABASE IF EXISTS veggieburgers_db;
+USE  c7nvz2ld5h6nv2a4;
 
-CREATE DATABASE veggieburgers_db;
-
-USE veggieburgers_db;
-
-CREATE TABLE veggieburgers_db.burgers
-(
-  id int NOT NULL AUTO_INCREMENT,
-  veggieburger_name varchar(255) NOT NULL,
+CREATE TABLE burgers (
+  id INT AUTO_INCREMENT NOT NULL,
+  burger_name varchar(300) NOT NULL,
   devoured BOOLEAN DEFAULT false,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   date_consumed TIMESTAMP,
-  PRIMARY KEY (id)
+  PRIMARY KEY(id)
 );
+
