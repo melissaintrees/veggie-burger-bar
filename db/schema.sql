@@ -1,11 +1,10 @@
-### Schema
-DROP DATABASE IF EXISTS veggieburgers_db;
+DROP DATABASE IF EXISTS ijrbt61g1zevcgx3;
 
-CREATE DATABASE veggieburgers_db;
+CREATE DATABASE ijrbt61g1zevcgx3;
 
-USE veggieburgers_db;
+USE  ijrbt61g1zevcgx3;
 
-CREATE TABLE veggieburgers_db.burgers
+CREATE TABLE veggieburgers_db
 (
   id int NOT NULL AUTO_INCREMENT,
   veggieburger_name varchar(255) NOT NULL,
@@ -13,4 +12,3 @@ CREATE TABLE veggieburgers_db.burgers
   date_consumed TIMESTAMP,
   PRIMARY KEY (id)
 );
-
