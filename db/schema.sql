@@ -1,10 +1,10 @@
-DROP DATABASE IF EXISTS ijrbt61g1zevcgx3;
+DROP DATABASE IF EXISTS veggieburgers_db;
 
-CREATE DATABASE ijrbt61g1zevcgx3;
+CREATE DATABASE veggieburgers_db;
 
-USE  ijrbt61g1zevcgx3;
+USE veggieburgers_db;
 
-CREATE TABLE veggieburgers_db
+CREATE TABLE veggieburgers_db.burgers
 (
   id int NOT NULL AUTO_INCREMENT,
   veggieburger_name varchar(255) NOT NULL,
