@@ -1,5 +1,34 @@
+.vbtxt {
+  font-size: 9em;
+  text-align: center;
+  color: #FFF4C9;
+ /* opacity: .8;*/
+ /* -webkit-text-stroke: 1px #81AE64;*/
+}
+.opt-txt {
+  color: #709053;
+  font-weight: 600;
+}
+
+.form-group {
+  display: inline;
+}
+
+.lead {
+  font-size: 36px;
+  -webkit-text-stroke: 0px;
+  display: inline-block;
+  color: #81AE64;
+}
+.jumbotron {
+  background-color: #C7E78B;
+  opacity: .8;
+  padding: 0;
+}
+
 body {
-  background-color: green;
+  background-color: #FFF4C9;
+  background-image: url("../img/wood_pattern_@2X.png")
 }
 
 img {
@@ -11,3 +40,46 @@ img {
   text-align: center;
 }
 
+.col-sm-12 {
+  background-color: #FFF4C9;
+  opacity: .8;
+  margin-top: 20px;
+}
+
+.col-md-5 {
+  background-color: #FFF4C9;
+  opacity: .8;
+  padding:40px;
+}
+
+.submitveggie {
+  background-color: #FFF4C9;
+  background-opacity: .6;
+}
+
+footer {
+  background-color: #709053;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones and tablets: */
+.vbtxt {
+  font-size: 3.5em;
+   margin-bottom: -20px;
+}
+.lead {
+  font-size: .5em;
+}
+.jumbotron {
+  background-color: #C7E78B;
+  opacity: .8;
+  margin-bottom: -8px;
+}
+
+.opt-txt {
+   font-size: 1.2em;
+   margin-top: -15px;
+}
+
+}

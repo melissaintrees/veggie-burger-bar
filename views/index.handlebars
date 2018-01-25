@@ -1,60 +1,63 @@
 
+<div class="jumbotron">
+  <h1 class="display-4 vbtxt">VEGGIE<span class="lead">burger bar</p></h1>
 
-<div class="submitveggie">
-<br>
-<img src="assets/img/beet-burger.jpg" alt="beet burger" />
-  <h2>Place Your Veggie Burger Order</h2>
+      <div class="submitveggie">
+        <hr class="my-4">
+        <h3 class="opt-txt">Make Selection From Below Or</h3>
+        <form class="create-form" action="/" method="POST">
+          <div class="form-group" >
+            <label for="vb_id"></label>
+            <input type="text" id="vb_id" name="name" placeholder="Add to Menu Here" required/>
+          </div>
+          <button type="submit" class="btn btn-secondary mb-2">Submit</button>
+        </form>
 
-  <form class="create-form" action="/" method="POST">
-    <div class="form-group">
-      <label for="vb_id"></label>
-      <input type="text" id="vb_id" name="name" placeholder="CUSTOM VEGGIE BURGER" required/>
+      </div>
+
+</div>
+
+<div class="container">
+  <div class="row justify-content-around">
+
+    <div class="col-sm-12 col-md-5 col-lg-5">
+      <h2>Cooked to Order</h2>
+
+        {{#each burgers}}
+          {{#if this.devoured}}
+            {{this.veggieburger_name}}
+              <form action="/{{this.id}}?_method=POST" method="POST">
+                <input type="hidden" name="devoured" value="false">
+                <button type="submit" class="order-again"> Order it!</button>
+              </form>
+          {{/if}}
+        {{/each}}
+
     </div>
 
-    <button type="submit">Place Order</button>
-  </form>
+    <div class="col-sm-12 col-md-5 col-lg-5">
+      <h2>Pre-Made</h2>
 
-  <p>Make your Own Veggie Burger Above or Order One From the Menu Below !</p>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            {{this.veggieburger_name}}
+              <form action="/{{this.id}}?_method=POST" method="POST">
+                <input type="hidden" name="devoured" value="true">
+                <button type="submit" class="devour"> Devour it!</button>
+              </form>
+          {{/unless}}
+        {{/each}}
 
+    </div>
+  </div>
 </div>
 
-
-<div class="vb_left">
-
-<h2>Veggie Burgers Ready:</h2>
-
-  {{#each burgers}}
-    {{#unless this.devoured}}
-      {{this.veggieburger_name}}
-
-        <form action="/{{this.id}}?_method=POST" method="POST">
-          <input type="hidden" name="devoured" value="true">
-          <button type="submit" class="devour"> Devour it!</button>
-        </form>
-
-    {{/unless}}
-  {{/each}}
+<footer>
+<div class="row no-gutters">
+  <div class="col-12 col-sm-6 col-md-8"><p>Made by Melissa St Moore 2018</p></div>
 
 </div>
-
-<div class="vb_right">
-
-<h2>Veggie Burger Menu:</h2>
-
-  {{#each burgers}}
-    {{#if this.devoured}}
-
-
-      {{this.veggieburger_name}}
-        <form action="/{{this.id}}?_method=POST" method="POST">
-          <input type="hidden" name="devoured" value="false">
-          <button type="submit" class="order-again"> Order it!</button>
-        </form>
-
-    {{/if}}
-  {{/each}}
-
-</div>
+</footer>
 
 
 
