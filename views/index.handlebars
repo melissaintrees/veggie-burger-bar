@@ -2,7 +2,6 @@
 <div class="jumbotron text-white rounded bg-dark">
 
   <h1 class="display-4 vbtxt">VEGGIE<span class="lead">burger bar</p></h1>
-
       <div class="submitveggie">
         <hr class="my-4">
         <h3 class="opt-txt">Make Selection From Below Or</h3>
@@ -13,13 +12,13 @@
           </div>
           <button type="submit" class="btn btn-secondary mb-2">Submit</button>
         </form>
-
       </div>
 
 </div>
 
 
 <div class="container">
+
   <div class="row justify-content-center">
 
     <div class="col-md-6 bg-dark">
@@ -29,10 +28,10 @@
             <div class="card text-center" style="width: 18rem;">
             <div class="card-header">{{this.veggieburger_name}}</div>
               <div class="card-body">
-             <form action="/{{this.id}}?_method=POST" method="POST">
-                <input type="hidden" name="devoured" value="false">
-                <button type="submit" class="order-again btn btn-secondary"> Order it!</button>
-              </form>
+                <form action="/{{this.id}}?_method=POST" method="POST">
+                  <input type="hidden" name="devoured" value="false">
+                  <button type="submit" class="order-again btn btn-secondary"> Order it!</button>
+                </form>
               </div>
             </div>
           {{/if}}
@@ -47,22 +46,23 @@
             <div class="card text-center" style="width: 18rem;">
             <div class="card-header">{{this.veggieburger_name}}</div>
               <div class="card-body bg-dark">
-              <form action="/{{this.id}}?_method=POST" method="POST">
-                <input type="hidden" name="devoured" value="true">
-                <button type="submit" class="devour btn btn-outline-light"> Devour it!</button>
-              </form>
+                <form action="/{{this.id}}?_method=POST" method="POST">
+                  <input type="hidden" name="devoured" value="true">
+                  <button type="submit" class="devour btn btn-outline-light"> Devour it!</button>
+                </form>
               </div>
             </div>
           {{/unless}}
         {{/each}}
 
-   </div>
-</div></div>
+    </div>
+
+  </div>
+</div>
+
 <footer class="footer">
-      <div class="container"><br>
-        <p class="text-dark">Made by Melissa St Moore</p>
-      </div>
-    </footer>
-
-
-
+  <div class="container">
+  <br>
+    <p class="text-dark">Made by Melissa St Moore</p>
+  </div>
+</footer>

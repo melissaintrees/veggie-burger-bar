@@ -1,20 +1,18 @@
+body {
+  background-color: #FFF4C9;
+  background-image: url("../img/wood_pattern_@2X.png")
+}
+
+.jumbotron {
+  background-color: #C7E78B;
+  opacity: .8;
+  padding: 0;
+}
 
 .vbtxt {
   font-size: 9em;
   text-align: center;
   color: #FFF4C9;
- /* opacity: .8;*/
- /* -webkit-text-stroke: 1px #81AE64;*/
-}
-.opt-txt {
-  color: #709053;
-  font-weight: 600;
-  font-family: monaco, Consolas, "Lucida Console", monospace;
-  font-size: 1.25em;
-}
-
-.form-group {
-  display: inline;
 }
 
 .lead {
@@ -23,39 +21,20 @@
   display: inline-block;
   color: #81AE64;
 }
-.jumbotron {
-  background-color: #C7E78B;
-  opacity: .8;
-  padding: 0;
-}
 
-.bg-beige {
-  background-color: #C7E78B !important;
-}
-.menu-head {
-  color:#FFF4C9;
-}
-body {
-  background-color: #FFF4C9;
-  background-image: url("../img/wood_pattern_@2X.png")
-}
-.card-body{
-  background-color: #FFF4C9;
-}
-
-img {
-  width: 30%;
-  text-align: center;
+.form-group {
+  display: inline;
 }
 
 .submitveggie {
   text-align: center;
 }
 
-.col-sm-10 {
-  background-color: #FFF4C9;
-  opacity: .8;
-  margin-top: 20px;
+.opt-txt {
+  color: #709053;
+  font-weight: 600;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size: 1.25em;
 }
 
 .col-md-6 {
@@ -65,6 +44,11 @@ img {
   text-align: center;
 }
 
+.menu-head {
+  color:#FFF4C9;
+  text-transform: uppercase;
+}
+
 .card {
   margin-right: auto;
   margin-left: auto;
@@ -72,20 +56,20 @@ img {
   margin-top: 10px;
   background-color: #C7E78B;
 }
+
 .card-header {
   background-color: #81AE64;
   font-family: monaco, Consolas, "Lucida Console", monospace;
 }
 
-.menu-head{
-
-   text-transform: uppercase;
+.card-body{
+  background-color: #FFF4C9;
 }
+
 .submitveggie {
   background-color: #FFF4C9;
   background-opacity: .6;
 }
-
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -97,6 +81,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 90px;
 }
+
 footer {
   position: absolute;
   bottom: 0;
@@ -109,38 +94,48 @@ footer {
 
 footer p {
   text-align: center;
-
 }
 
 
 @media only screen and (max-width: 672px) {
-    /* For mobile phones and tablets: */
+
+.jumbotron {
+  margin-bottom:10px;
+}
+
 .vbtxt {
   font-size: 3.5em;
-   margin-bottom: -20px;
+  margin-bottom: -20px;
 }
+
 .lead {
   font-size: .3em;
 }
 
-  .jumbotron {
-
-  margin-bottom:10px;
-}
-
-.opt-txt {
-   font-size: 1em;
-   margin-top: -15px;
-}
 h2 {
   font-size: 1.5em;
 }
+
+.opt-txt {
+  font-size: 1em;
+  margin-top: -15px;
+}
+
 }
 
 @media only screen and (max-width: 575px) {
 
-  .jumbotron {
-
+.jumbotron {
   margin-bottom:0px;
 }
+
+.col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+footer {
+  height: 90px;
+}
+
 }
