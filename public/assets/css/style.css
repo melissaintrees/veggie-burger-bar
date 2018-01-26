@@ -26,9 +26,18 @@
   padding: 0;
 }
 
+.bg-beige {
+  background-color: #C7E78B !important;
+}
+.menu-head {
+  color:#FFF4C9;
+}
 body {
   background-color: #FFF4C9;
   background-image: url("../img/wood_pattern_@2X.png")
+}
+.card-body{
+  background-color: #FFF4C9;
 }
 
 img {
@@ -40,26 +49,34 @@ img {
   text-align: center;
 }
 
-.col-sm-12 {
+.col-sm-10 {
   background-color: #FFF4C9;
   opacity: .8;
   margin-top: 20px;
 }
 
-.col-md-5 {
+.col-md-6 {
   background-color: #FFF4C9;
   opacity: .8;
-  padding:40px;
+  padding: 20px;
+  text-align: center;
 }
 
+.card {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #C7E78B;
+}
+.card-header {
+  background-color: #81AE64;
+}
 .submitveggie {
   background-color: #FFF4C9;
   background-opacity: .6;
 }
 
-footer {
-  background-color: #709053;
-}
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -69,20 +86,21 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  height: 65px;
+ /* Vertically center the text there */
   background-color: #709053;
 }
 
 footer p {
   text-align: center;
+
 }
 
 
@@ -98,7 +116,7 @@ footer p {
 .jumbotron {
   background-color: #C7E78B;
   opacity: .8;
-  margin-bottom: -8px;
+
 }
 
 .opt-txt {
