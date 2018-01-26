@@ -1,3 +1,4 @@
+
 .vbtxt {
   font-size: 9em;
   text-align: center;
@@ -8,6 +9,8 @@
 .opt-txt {
   color: #709053;
   font-weight: 600;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size: 1.25em;
 }
 
 .form-group {
@@ -71,6 +74,12 @@ img {
 }
 .card-header {
   background-color: #81AE64;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+.menu-head{
+
+   text-transform: uppercase;
 }
 .submitveggie {
   background-color: #FFF4C9;
@@ -104,24 +113,34 @@ footer p {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 672px) {
     /* For mobile phones and tablets: */
 .vbtxt {
   font-size: 3.5em;
    margin-bottom: -20px;
 }
 .lead {
-  font-size: .5em;
+  font-size: .3em;
 }
-.jumbotron {
-  background-color: #C7E78B;
-  opacity: .8;
 
+  .jumbotron {
+
+  margin-bottom:10px;
 }
 
 .opt-txt {
-   font-size: 1.2em;
+   font-size: 1em;
    margin-top: -15px;
 }
+h2 {
+  font-size: 1.5em;
+}
+}
 
+@media only screen and (max-width: 575px) {
+
+  .jumbotron {
+
+  margin-bottom:0px;
+}
 }
