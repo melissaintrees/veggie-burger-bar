@@ -26,6 +26,7 @@ Though most of the logic is handled on the back end, Bootstrap was leveraged to 
   ![Full Screen](/screenshots/full_view.png)
 
 - Mobile Screen View
+
   ![Mobile Screen](/screenshots/mobile_view.jpg)
 
 ## Deployment
