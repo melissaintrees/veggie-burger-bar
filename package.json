@@ -1,7 +1,7 @@
 {
   "name": "eat-the-veggie-burger",
   "version": "1.0.0",
-  "description": "eat the veggie burger app with handlebars and mysql database",
+  "description": "Veggie Burger Bar app with Node, Express, Handlebars, and MySql",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

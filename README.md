@@ -1,68 +1,49 @@
 # Veggie Burger Bar
 
-Full Stack App that works with a MySql database that allows you to order, create and "virtually" eat veggie burgers. It is deployed on [Heroku](https://veggie-burger-bar.herokuapp.com/) or you can install it on your local machine.
+## About
 
-## Getting Started
+A full stack app that uses Node, Express, Handlebars, MySQl and Bootstrap to allows users to order, create and "virtually" eat veggie burgers. Please see the app deployed to Heroku [here](https://veggie-burger-bar.herokuapp.com/).
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+### How it works
 
-### Prerequisites
+Using a ORM, the app connects to MySql using 3 basic CRUD functions:
 
-What things you need to install the software and how to install them
+  1. READS the entries from a MySql database and dynamically adds them to the DOM.
+  2. UPDATES the selected options upon user click of either "Order It," or "Eat It" which...
+     * hits an Express route `/:id` which changes the item's state to either "devoured," or "ordered."
+     * The page re-routes to index where the chosen item is in the section that reflects it's current state(via Handlebars).
+  3. CREATES the user has the option of ordering a custom item which they can then virtually eat...
+    * hits a post route in Express which then adds a new burger to the MySql database
+    * the page re-routes to the index where the user creation is rendered in the "Eat It," section(via Handlebars).
 
-```
-Give examples
-```
+## Visuals/Screen Shots
 
-### Installing
+Though most of the logic is handled on the back end, Bootstrap was leveraged to provide a responsive and user friendly interface.
+- All Screen Mock Up
+ * ![Mock Up](/screenshots/mockup_diff_screens.jpg)
 
-A step by step series of examples that tell you have to get a development env running
+- Full Screen View
+ * ![Full Screen](/screenshots/full_view.png)
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+- Mobile Screen View
+ * ![Mobile Screen](/screenshots/mobile_view.jpg)
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+To deploy in your system:
+
+  1. Download the repo.
+  2. Run `npm install` to install the node dependencies
+  3. Go to `connection.js` on Line 11 change the password to your local MySql connection password
+  4. Run `db/schema.sql` and `db/seeds.sql` using MySql Workbench or a program of your choice.
 
 ## Built With
 
-* [NodeJs](http://www.dropwizard.io/1.0.2/docs/) - The programming framework
-* [Express](http://www.dropwizard.io/1.0.2/docs/) - The server framework.
-* [MySql](https://maven.apache.org/) - Database Management
-* [Handlebars](https://rometools.github.io/rome/) - Templating System
-* [Bootstrap] - Responsive Framework System
+* [NodeJs](https://nodejs.org/en/) - The programming framework
+* [Express](https://expressjs.com/) - The server framework.
+* [MySql](https://www.mysql.com/) - Database Management
+* [Handlebars](http://handlebarsjs.com/) - Templating System
+* [Bootstrap](http://getbootstrap.com) - Responsive Framework System
 
 ## Authors
 
@@ -70,9 +51,9 @@ Add additional notes about how to deploy this on a live system
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Tips on Good Veggie Burgers - [Beyond Meat](http://beyondmeat.com/), [Dr. Praegers](https://drpraegers.com/our-food/california-veggie-burgers/)
+* Inspiration - [Mohawk Bend(Restaurant Site)](http://mohawk.la/)
+
 
 
 
