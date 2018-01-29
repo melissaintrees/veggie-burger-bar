@@ -20,13 +20,13 @@ Using a ORM, the app connects to MySql using 3 basic CRUD functions:
 
 Though most of the logic is handled on the back end, Bootstrap was leveraged to provide a responsive and user friendly interface.
 - All Screen Mock Up
- * ![Mock Up](/screenshots/mockup_diff_screens.jpg)
+  ![Mock Up](/screenshots/mockup_diff_screens.jpg)
 
 - Full Screen View
- * ![Full Screen](/screenshots/full_view.png)
+  ![Full Screen](/screenshots/full_view.png)
 
 - Mobile Screen View
- * ![Mobile Screen](/screenshots/mobile_view.jpg)
+  ![Mobile Screen](/screenshots/mobile_view.png)
 
 ## Deployment
 
