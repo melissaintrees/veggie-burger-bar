@@ -18,6 +18,7 @@ var burger = {
   }
 };
 
+
 // Export the database functions for the veggie burger controller
 
 module.exports = burger;
