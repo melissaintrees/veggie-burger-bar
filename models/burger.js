@@ -11,9 +11,10 @@ var burger = {
       cb(res);
     });
   },
-  update: function(objColVals, condition, cb){
-    orm.updateOne("burgers", objColVals, condition, function(res){
+  update: function(column, newValue, burgerId, cb){
+    orm.updateOne('burgers', column, newValue, burgerId, function(res){
       cb(res);
+      console.log("ORM MODEL UPDATE FUNCTIONALITY IS WORKING")
     });
   }
 };
